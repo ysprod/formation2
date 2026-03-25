@@ -81,4 +81,11 @@ interface UnePartie {
     variablecomposite: string | Date | number | boolean
 }
 
+interface cartes {
+    enseignes: string[];
+    valeurs: string[];
+    nombreDeCartes: number;
+    cartes: string[];
+    couleur: string[];
+}
 
