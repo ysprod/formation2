@@ -52,6 +52,7 @@ let estCeQueLeJoueurAGagne: boolean = false;
 
 
 
+
 let carte1: Carte = {
     nom: "trefle",
     couleur: "noir",
@@ -142,4 +143,34 @@ affficherUnMessage("le nombre de cartes est: " + nombreCarteSaisi);
  
 let nomCarteEnmain = NomDeCarteEnmain();
 affficherUnMessage("le nom de carte en main est: " + nomCarteEnmain);
+
+class robotCarte{
+    nom: string;
+
+    constructor(nom: string){
+        this.nom = nom;
+    }
+}
+let nomDelaCartes = ["as de coeur", "roi de carreau", "dame de trefle", "10 de coeur", "9 de carreau", "8 de trefle"];
+let robot1 = new robotCarte("robot1");
+let robot2 = new robotCarte("robot2");
+
+class partieDeCarte {
+    nomDuJeu: string;
+    nombreDeCarte: number;
+    nombreDeJoueurs: number;
+    nombreDeJoueursMax: number;
+    scoreMax: number;
+
+constructor(nomDuJeu: string, nombreDeCarte: number, nombreDeJoueurs: number, nombreDeJoueursMax: number, scoreMax: number){
+    this.nomDuJeu = nomDuJeu;
+    this.nombreDeCarte = nombreDeCarte;
+    this.nombreDeJoueurs = nombreDeJoueurs;
+    this.nombreDeJoueursMax = nombreDeJoueursMax;
+    this.scoreMax = scoreMax;
+}
+}
+
+let partie1 = new partieDeCarte("poker", 52, 4, 6, 100);    
+let partie2 = new partieDeCarte("huitamericain", 52, 2, 4, 50);
 
